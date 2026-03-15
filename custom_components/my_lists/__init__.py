@@ -4,6 +4,7 @@ from __future__ import annotations
 import os
 import voluptuous as vol
 from homeassistant.components import frontend
+from homeassistant.components.http import StaticPathConfig
 from homeassistant.core import HomeAssistant
 
 from .const import DOMAIN
@@ -27,8 +28,8 @@ async def async_setup(hass: HomeAssistant, config: dict) -> bool:
 
     # Register panel
     panel_dir = os.path.join(os.path.dirname(__file__), "frontend")
-    hass.http.register_static_path(
-        "/my_lists", panel_dir, cache_headers=False
+    await hass.http.async_register_static_paths(
+        [StaticPathConfig("/my_lists", panel_dir, False)]
     )
 
     frontend.async_register_built_in_panel(
