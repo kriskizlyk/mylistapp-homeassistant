@@ -16,7 +16,7 @@ Personal checklist and mileage tracking app with AI photo recognition for Home A
 - **Drag-to-Reorder** — reorder lists with touch/mouse drag
 - **Sub-lists** — expandable sub-items with their own photos and checkboxes
 
-![My Lists](https://raw.githubusercontent.com/kriskizlyk/mylistapp/main/dist/icon-512.png)
+![My Lists](https://raw.githubusercontent.com/kriskizlyk/mylistapp-homeassistant/main/dist/icon-512.png)
 
 ## Installation
 
@@ -24,7 +24,7 @@ Personal checklist and mileage tracking app with AI photo recognition for Home A
 
 1. Open HACS in Home Assistant
 2. Click **⋮** (three dots, top right) → **Custom Repositories**
-3. Add URL: `https://github.com/kriskizlyk/mylistapp`
+3. Add URL: `https://github.com/kriskizlyk/mylistapp-homeassistant`
 4. Category: **Dashboard**
 5. Click **Add** → find **My Lists** → **Download**
 6. Restart Home Assistant
@@ -33,7 +33,7 @@ Personal checklist and mileage tracking app with AI photo recognition for Home A
 
 ```bash
 cd /config/www/community/
-git clone https://github.com/kriskizlyk/mylistapp.git
+git clone https://github.com/kriskizlyk/mylistapp-homeassistant.git
 ```
 
 ## Usage
@@ -43,7 +43,7 @@ git clone https://github.com/kriskizlyk/mylistapp.git
 Add to a dashboard:
 
 ```yaml
-type: custom:mylistapp
+type: custom:mylistapp-homeassistant
 height: 85vh
 ```
 
@@ -56,7 +56,7 @@ panel_iframe:
   my_lists:
     title: "My Lists"
     icon: mdi:clipboard-check
-    url: "/local/community/mylistapp/index.html"
+    url: "/local/community/mylistapp-homeassistant/index.html"
 ```
 
 Then restart Home Assistant.
